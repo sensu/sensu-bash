@@ -13,7 +13,6 @@ fi
 
 # update apt, install depenedencies
 echo "Installing dependencies..."
-#apt-get update > /dev/null
 apt-get install -y curl > /dev/null
 
 
