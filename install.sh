@@ -9,6 +9,7 @@ grep -i 'ubuntu\|debian' /etc/issue > /dev/null 2>&1
 issue=$?
 if [ $issue -ne 0 ]; then
     echo "This script must be run on Ubuntu or Debian only"
+    exit 1
 fi
 
 # update apt, install depenedencies
