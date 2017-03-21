@@ -21,7 +21,7 @@ install_core ()
 {
     echo "...installing the Sensu Core software repository..."
     wget -q http://repositories.sensuapp.org/apt/pubkey.gpg -O- | apt-key add - > /dev/null 2>&1
-    echo "deb     http://repositories.sensuapp.org/apt sensu main" | tee /etc/apt/sources.list.d/sensu.list > /dev/null 2>&1
+    echo "deb     http://repositories.sensuapp.org/apt $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/sensu.list > /dev/null 2>&1
     echo "SUCCESS!"
     success=1
 }
